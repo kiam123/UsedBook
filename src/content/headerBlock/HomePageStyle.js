@@ -46,6 +46,7 @@ export const Detail = styled.div`
     text-align: left;
     display: none;
     cursor: auto;
+    z-index: 1;
 `;
 
 export const DetailBlock = styled.div`
@@ -67,6 +68,7 @@ export const DetailItem = styled(Link)`
 export const ListGroupItem = styled.div`
     height: 40px;
     line-height: 40px;
+    
 
     &:hover {
         background-color: orange;
@@ -76,10 +78,23 @@ export const ListGroupItem = styled.div`
     }
 `;
 
+export const AdvertiseItem = styled.div`
+    position: absolute;
+    height: 100%;
+    width: 130px;
+    background-color: rgba(255,255,255,0.5);
+    display: none;
+`;
+
 export const Advertise = styled.div`
     margin-left: 20px;
     width: 100%;
     height: 322px;
+    position: relative;
+
+    &:hover ${AdvertiseItem} {
+        display: block;
+    }
 `;
 
 export const ListBlock = styled(Block)`

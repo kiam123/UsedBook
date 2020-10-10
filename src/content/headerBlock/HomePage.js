@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HeaderWrapper, Block, ListGroup, ListGroupItem, Detail, DetailBlock, DetailItemBlock, DetailItem, ListGroupHeaderItem, Advertise, ListBlock} from './HomePageStyle';
+import { HeaderWrapper, Block, ListGroup, ListGroupItem, Detail, DetailBlock, DetailItemBlock, DetailItem, ListGroupHeaderItem, Advertise, AdvertiseItem, ListBlock} from './HomePageStyle';
 import advertise1 from '../../images/advertising/1.jpg';
 import advertise2 from '../../images/advertising/2.jpg';
 import advertise3 from '../../images/advertising/3.jpg';
@@ -7,6 +7,8 @@ import img1 from '../../images/pic/1.jpg';
 import img2 from '../../images/pic/2.jpg';
 import img3 from '../../images/pic/3.jpg';
 import img4 from '../../images/pic/4.jpg';
+import leftArrow from '../../images/pic/left-arrow.png';
+import rightArrow from '../../images/pic/right-arrow.png';
 
 export default class HomePage extends Component {
     constructor(props) {
@@ -16,14 +18,16 @@ export default class HomePage extends Component {
             imgAdvertiselist: [advertise1, advertise2, advertise3],
             imgBookList: [img1, img2, img3, img4]
         };
+        this.changePrevImage = this.changePrevImage.bind(this);
+        this.changeNextImage = this.changeNextImage.bind(this);
     }
 
     componentDidMount() {
-        // this.interval = setInterval(this.changeImage.bind(this), 3000);
+        // this.autoChangeImage = setInterval(this.autoChangeImage.bind(this), 3000);
     }
 
     componentWillUnmount() {
-        clearInterval(this.interval);
+        clearInterval(this.autoChangeImage);
     }
 
     render() {
@@ -155,76 +159,112 @@ export default class HomePage extends Component {
                         </ListGroupItem>
                     </ListGroup>
                     <Advertise>
+                        <AdvertiseItem onClick={this.changePrevImage}>
+                            <img src={leftArrow} alt="" style={{height:"100px", width:"100px", position:"absolute", top:"35%"}}></img>
+                        </AdvertiseItem>
+                        <AdvertiseItem onClick={this.changeNextImage} style={{right:"0%"}}>
+                            <img src={rightArrow} alt="" style={{height:"100px", width:"100px", position:"absolute", right:"0%", top:"35%"}}></img>
+                        </AdvertiseItem>
                         <img src={this.state.imgAdvertiselist[this.state.count]} alt="" style={{height:"100%", width:"100%"}}></img>
                     </Advertise>
                 </Block>
                 <Block>
                     <div style={{display: "block"}}>文學藝術 / 更多</div>
                 </Block>
-                <ListBlock style={{height:"140px"}}>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
-                        <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", marginLeft:"0px"}}></img>
-                    </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[2]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[3]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
-                        <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
+                <ListBlock style={{height:"170px", display:"flex"}}>
+                    <div style={{height:"170px", width:"200px"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                            <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", marginLeft:"0px"}}></img>
+                        </span>
+                        <a href="/">作品精選</a>
+                        <div>三毛</div>
+                        <div>100</div>
+                    </div>
+                    <div style={{height:"170px", width:"200px"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <a href="/">自在獨行</a>
+                        <div>賈平凹</div>
+                        <div>100</div>
+                    </div>
+                    <div style={{height:"170px", width:"200px"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[2]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <a href="/">人生給的答案</a>
+                        <div>費里斯</div>
+                        <div>100</div>
+                    </div>
+                    <div style={{height:"170px", width:"200px"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[3]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <a href="/">挪威的深林</a>
+                        <div>村上春樹</div>
+                        <div>100</div>
+                    </div>
+                    <div style={{height:"170px", width:"200px"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                            <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <a href="/">作品精選</a>
+                        <div>三毛</div>
+                        <div>100</div>
+                    </div>
+                    <div style={{height:"170px", width:"200px"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <a href="/">自在獨行</a>
+                        <div>賈平凹</div>
+                        <div>100</div>
+                    </div>
                 </ListBlock>
                     
                 <Block>
                     <div>少兒 / 更多</div>
                 </Block>
-                <ListBlock style={{height:"140px"}}>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                <ListBlock style={{height:"170px"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
                         <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", marginLeft:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                         <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                         <img src={this.state.imgBookList[2]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                         <img src={this.state.imgBookList[3]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
                         <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                         <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
                 </ListBlock>
                 <Block>
                     <div>人文社科 / 更多</div>
                 </Block>
-                <ListBlock style={{height:"140px"}}>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                <ListBlock style={{height:"170px"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
                         <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", marginLeft:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                         <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                         <img src={this.state.imgBookList[2]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                         <img src={this.state.imgBookList[3]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
                         <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
-                    <span id="" class="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                         <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                     </span>
                 </ListBlock>
@@ -232,7 +272,7 @@ export default class HomePage extends Component {
         )
     }
 
-    changeImage() {
+    autoChangeImage() {
         let index = this.state.count + 1;
         
         if(index > 2) {
@@ -242,5 +282,30 @@ export default class HomePage extends Component {
         this.setState(() => ({
             count: index
         }));
+    }
+
+    changePrevImage() {
+        // clearInterval(this.autoChangeImage);
+        let index = this.state.count;
+
+        if(index > 0 && index < this.state.imgAdvertiselist.length) {
+            index = this.state.count - 1;
+            this.setState(() => ({
+                count: index
+            }));
+        }
+    }
+
+    changeNextImage() {
+        // clearInterval(this.autoChangeImage);
+        let index = this.state.count;
+        console.log(index+" " +this.state.imgAdvertiselist.length-1);
+        if(index < this.state.imgAdvertiselist.length-1) {
+            index = this.state.count + 1;
+            console.log(index);
+            this.setState(() => ({
+                count: index
+            }));
+        }
     }
 }
