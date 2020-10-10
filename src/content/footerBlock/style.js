@@ -6,3 +6,23 @@ export const FooterBlock = styled.div`
     margin-top: 50px;
     background-color: black;
 `;
+
+export const Block = styled.div`
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flow-root;
+    margin-top: 50px;
+`;
+
+export const FooterListBlock = styled.div`
+    margin-top: 30px;
+    display: block;
+    height: 50px;
+`;
+
+export const FooterListItem = styled.div`
+    width: 25%;
+    height: 50px;
+    display: inline-block;
+`;
