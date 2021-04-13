@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { HeaderWrapper, Block, ListGroup, ListGroupItem, Detail, DetailBlock, DetailItemBlock, DetailItem, ListGroupHeaderItem, Advertise, AdvertiseItem, ListBlock} from './HomePageStyle';
+import { HeaderWrapper, Block, ListGroup, ListGroupItem, Detail, DetailBlock, DetailItemBlock, DetailItem, 
+    ListGroupHeaderItem, Advertise, AdvertiseItem, ListBlock, ListBlockItem, BookName} from './HomePageStyle';
 import advertise1 from '../../images/advertising/1.jpg';
 import advertise2 from '../../images/advertising/2.jpg';
 import advertise3 from '../../images/advertising/3.jpg';
@@ -171,102 +172,162 @@ export default class HomePage extends Component {
                 <Block>
                     <div style={{display: "block"}}>文學藝術 / 更多</div>
                 </Block>
-                <ListBlock style={{height:"170px", display:"flex"}}>
-                    <div style={{height:"170px", width:"200px"}}>
+                <ListBlock style={{height:"200px", display:"flex"}}>
+                    <ListBlockItem style={{textAlign: "center"}}>
                         <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
                             <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", marginLeft:"0px"}}></img>
                         </span>
-                        <a href="/">作品精選</a>
+                        <BookName link="/">作品精選</BookName>
                         <div>三毛</div>
                         <div>100</div>
-                    </div>
-                    <div style={{height:"170px", width:"200px"}}>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
                         <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                             <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                         </span>
-                        <a href="/">自在獨行</a>
+                        <BookName link="/">自在獨行</BookName>
                         <div>賈平凹</div>
                         <div>100</div>
-                    </div>
-                    <div style={{height:"170px", width:"200px"}}>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
                         <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                             <img src={this.state.imgBookList[2]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                         </span>
-                        <a href="/">人生給的答案</a>
+                        <BookName link="/">人生給的答案</BookName>
                         <div>費里斯</div>
                         <div>100</div>
-                    </div>
-                    <div style={{height:"170px", width:"200px"}}>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
                         <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                             <img src={this.state.imgBookList[3]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                         </span>
-                        <a href="/">挪威的深林</a>
+                        <BookName link="/">挪威的深林</BookName>
                         <div>村上春樹</div>
                         <div>100</div>
-                    </div>
-                    <div style={{height:"170px", width:"200px"}}>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
                         <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
                             <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                         </span>
-                        <a href="/">作品精選</a>
+                        <BookName link="/">作品精選</BookName>
                         <div>三毛</div>
                         <div>100</div>
-                    </div>
-                    <div style={{height:"170px", width:"200px"}}>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
                         <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
                             <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
                         </span>
-                        <a href="/">自在獨行</a>
+                        <BookName link="/">自在獨行</BookName>
                         <div>賈平凹</div>
                         <div>100</div>
-                    </div>
+                    </ListBlockItem>
                 </ListBlock>
                     
                 <Block>
                     <div>少兒 / 更多</div>
                 </Block>
-                <ListBlock style={{height:"170px"}}>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
-                        <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", marginLeft:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[2]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[3]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
-                        <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
+                <ListBlock style={{height:"200px", display:"flex"}}>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                            <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", marginLeft:"0px"}}></img>
+                        </span>
+                        <BookName link="/">作品精選</BookName>
+                        <div>三毛</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">自在獨行</BookName>
+                        <div>賈平凹</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[2]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">人生給的答案</BookName>
+                        <div>費里斯</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[3]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">挪威的深林</BookName>
+                        <div>村上春樹</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                            <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">作品精選</BookName>
+                        <div>三毛</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">自在獨行</BookName>
+                        <div>賈平凹</div>
+                        <div>100</div>
+                    </ListBlockItem>
                 </ListBlock>
                 <Block>
                     <div>人文社科 / 更多</div>
                 </Block>
-                <ListBlock style={{height:"170px"}}>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
-                        <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", marginLeft:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[2]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[3]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
-                        <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
-                    <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
-                        <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
-                    </span>
+                <ListBlock style={{height:"200px", display:"flex"}}>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                            <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", marginLeft:"0px"}}></img>
+                        </span>
+                        <BookName link="/">作品精選</BookName>
+                        <div>三毛</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">自在獨行</BookName>
+                        <div>賈平凹</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[2]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">人生給的答案</BookName>
+                        <div>費里斯</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[3]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">挪威的深林</BookName>
+                        <div>村上春樹</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}} >
+                            <img src={this.state.imgBookList[0]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">作品精選</BookName>
+                        <div>三毛</div>
+                        <div>100</div>
+                    </ListBlockItem>
+                    <ListBlockItem style={{textAlign: "center"}}>
+                        <span id="" className="" style={{height:"140px", width:"200px", display:"block", float: "left"}}>
+                            <img src={this.state.imgBookList[1]} alt="" style={{maxHeight:"100%", maxWidth:"100%", margin:"0px"}}></img>
+                        </span>
+                        <BookName link="/">自在獨行</BookName>
+                        <div>賈平凹</div>
+                        <div>100</div>
+                    </ListBlockItem>
                 </ListBlock>
             </HeaderWrapper>
         )

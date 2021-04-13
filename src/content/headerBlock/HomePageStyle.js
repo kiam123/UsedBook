@@ -102,4 +102,19 @@ export const ListBlock = styled(Block)`
     display: block;
 `;
 
+export const ListBlockItem = styled.div`
+    height: "200px";
+    width: "200px";
+    text-align: "center";
+`;
 
+
+export const BookName = styled(Link)`
+    display: block;
+    width: 200px;
+    word-break: break-all;
+    max-height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+`;

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { FooterBlock, Block, FooterListBlock, FooterListItem } from './style';
-import buy from '../../images/pic/buy.jpg';
-import help from '../../images/pic/help.jpg';
-import like from '../../images/pic/like.jpg';
-import right from '../../images/pic/right.jpg';
+import buy from '../../images/pic/buy2.png';
+import help from '../../images/pic/help2.png';
+import like from '../../images/pic/like2.png';
+import right from '../../images/pic/right2.png';
 
 export default class Footer extends Component {
 
